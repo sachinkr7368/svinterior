@@ -1,0 +1,230 @@
+/* For full HD display */
+.services-main-container {
+  position: relative; /* Make the container relative */
+  width: 100%;
+  height: 550px;
+  padding-top: 120px;
+}
+.services-main-container-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.services-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 550px;
+  padding-top: 120px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.services-text-content {
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+}
+.services-sub-title {
+  font-size: clamp(1.25rem, 4vw, 2rem);
+  color: #fff;
+  font-weight: bold;
+}
+.all-services-list {
+  margin: 80px 0;
+}
+.all-services-list img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.services-header {
+  font-size: clamp(3rem, 4vw, 5rem);
+  font-weight: bold;
+  line-height: normal;
+  color: #0000000f;
+  position: absolute;
+  text-align: center;
+  left: 0;
+  width: 100%;
+}
+.services-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 10px 0;
+}
+.services-top-left {
+  height: 286px;
+  flex: 1;
+}
+.services-top-right {
+  height: 286px;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.services-topr-right-title {
+  font-weight: bold;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+.services-topr-right-sub-title {
+  font-weight: 500;
+  font-size: clamp(1rem, 4vw, 2rem);
+}
+.services-bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.services-bottom > div {
+  flex: 1;
+  height: 286px;
+  width: auto;
+}
+
+/* For smaller screens such as tablets */
+@media (max-width: 1024px) {
+  .services-main-container,
+  .services-overlay {
+    height: 450px;
+  }
+  .services-text-content {
+    height: 300px;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 768px) {
+  .services-main-container,
+  .services-overlay {
+    height: 350px;
+  }
+  .services-text-content {
+    height: 200px;
+  }
+  .all-services-list {
+    margin: 50px 0;
+  }
+  .services-top {
+    flex-direction: column-reverse;
+  }
+  .services-bottom {
+    flex-direction: column;
+  }
+}
+.all-services-layout {
+  margin-top: 75px;
+  padding: 1rem 0;
+}
+.services-title {
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: bold;
+  padding: 1rem 0;
+  color: #fff;
+}
+.services-title-2 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: bold;
+  padding: 1rem 0;
+}
+.services-photo-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  grid-gap: 1.5rem;
+}
+.grid-item {
+  padding: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  min-height: 200px;
+}
+.grid-item img {
+  width: 100%;
+  height: 285px;
+}
+/* Add hover effect for the extend icon */
+.extend-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.grid-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s; /* Adding transition for opacity and transform */
+  transform: scale(0.4);
+}
+
+.grid-item:hover .image-overlay {
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(1);
+}
+
+.image-overlay i {
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Larger image modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img {
+  max-width: 800px;
+  max-height: 600px;
+  width: 90%;
+  height: 90%;
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .all-services-layout {
+    margin-top: 60px;
+  }
+  .services-photo-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .modal img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .services-photo-container {
+    grid-template-columns: repeat(1, 1fr); /* Display images one by one */
+  }
+}

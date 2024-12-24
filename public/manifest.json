@@ -1,0 +1,31 @@
+{
+  "short_name": "S V Interior",
+  "name": "S V Interior",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "favicon.ico",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "favicon.ico",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "scope": "/",
+  "description": "S V Interior - Explore stunning interior designs for homes, offices, and commercial spaces. Our services include modern living room designs, office interior solutions, and luxury home decor. Contact us for professional interior design services",
+  "lang": "en-US",
+  "dir": "ltr",
+  "related_applications": [],
+  "prefer_related_applications": false
+}
